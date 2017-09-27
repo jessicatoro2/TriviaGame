@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hamilton Trivia Game</title>
+	
+	<!--Bootstraps jquery CDN-->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!--This is the link to the styles and reset-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Cinzel:400,700" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container text-center" id="star">
+		<img src="assets/images/starimage.svg">	
+		<div class="btn-group" id="start-button" role="group" aria-label="...">
+				<button type="button" id="start_pause_resume" class="btn btn-default">Start Game</button>
+		</div>
+	</div>
+	
+
+	<div id="game" id="questionsback">	
+
+		<!--Header with number that needs to be reached-->		
+		<div class="jumbotron text-center">
+			<img src="assets/images/Alexander_Hamilton_Signaturert2.svg" id="hamSign">
+			<p id="tagline">Hamilton, the man & the musical</p>
+				<div id="countdown">
+					<h2>Time left: </h2>
+					<div id="clock"></div>
+					<div id="units">
+						<span id="seconds"><h1>100</h1></span>
+						<p>seconds</p>
+					</div>
+				</div>
+		</div>
+
+		<!-- Questions are in this container -->		
+		<div id="questionDiv" class="container">
+
+			<!-- Question #1 -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Finish the lyric. <em>As a kid in the Carribean...</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">I played in the sand...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct"  name="optradio">I wished for a war...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">I heard the British canons go boom...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">I thought I could be of some assistance...
+							</label>
+						</form>
+					</div>
+				</div>
+			
+
+			<!-- Question #2 -->
+				<div class="col-sm-6">
+					<h4>What Caribbean island was Hamilton born on?</h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Antigua
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Puerto Rico
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">St. Martin
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">Nevis
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+
+			<!-- Question #3 -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>How many Federalist Papers did Hamilton write?</h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">51
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">62
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">12
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">85
+							</label>
+						</form>
+					</div>
+				</div>
+			
+
+			<!-- Question #4 -->
+			
+				<div class="col-sm-6">
+					<h4>Who killed Hamilton?</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Philip Schuyler
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">Aaron Burr
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">James Madison
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">John Laurens
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+
+			<!-- Question #5 -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>What did Martha Washington name after Hamilton? </em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Her dog
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">Her tomcat
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Her son 
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">A wing in the White House
+							</label>
+						</form>
+					</div>
+				</div>
+		
+		
+			<!-- Question #6 -->
+				<div class="col-sm-6">
+					<h4>Who did Hamilton cheat on his wife with?</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">Maria Reynolds
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Peggy Schuyler
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio"> Angelica Schuyler
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio"> Martha Jefferson
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Question #7 -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>What were the Reynolds Papers about?</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Amending the Constitiution 
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Establishing a financial system
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">An explanation of his affair
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">The book that held the Federalist papers
+							</label>
+						</form>
+					</div>
+				</div>
+			
+
+			<!-- Question #8 -->
+				<div class="col-sm-6">
+					<h4>Finish the lyric. <em>...And I hear the drinking song they're singing...</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Freedom for American, Freedom for France...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">We won, we won, won...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">The world turned upside down...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Gotta start a new nation, gotta meet my son...
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+		
+
+			<!-- Question #9 -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Which of his sons was killed in a duel?</em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">Paul
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio">Phillip
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">William
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio">James
+							</label>
+						</form>
+					</div>
+				</div>
+			
+
+			<!-- Question #10 -->
+				<div class="col-sm-6">
+					<h4>Finish the lyric. <em>Can I show you what I'm proudest of? </em></h4>
+					<div class="container">
+						<form>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio"> I raised funds in D.C. for the Washington monument...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="correct" name="optradio"> The orphanage, <br>I established the first private orphanage in New Your City.. 
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio"> I speak out against slavery...
+							</label><br>
+							<label class="radio-inline">
+								<input type="radio" class="wrongAnswer" name="optradio"> I interviewed every soldier that fought by your side...
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container text-center" id="doneButton">
+		<div class="btn-group" id="start-button" role="group" aria-label="...">
+				<button type="button" id="start_pause_resume" class="btn btn-default">Done!</button>
+		</div>
+	</div>
+	<!-- Instructions -->				
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- This is the jquery library CDN -->
+<script	src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<!-- Link to Javascript -->
+<script type="text/javascript" src="assets/javascripts/app.js"></script>
+
+</body>
+</html>
