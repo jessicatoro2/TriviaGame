@@ -24,7 +24,7 @@ body{
 
 }
 
-#questionDiv{
+.questionBackground{
 	background: black;
 	font-family: 'Asap Condensed', sans-serif;
 
@@ -62,7 +62,8 @@ body{
 }
 
 #finalscore{
-	background: none;
+	background: black;
+	padding: 0px !important;
 
 }
 
