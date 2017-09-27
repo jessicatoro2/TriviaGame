@@ -1,5 +1,5 @@
 var correctAnswer = 0;
-var count = 8;
+var count = 100;
 var wrongAnswer = 0;
 
 $(function(){
